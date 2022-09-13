@@ -29,8 +29,8 @@ class json_workerTest extends TestCase
     }
     public function test_delete_post()
     {
-        $json = json_worker::delete_post(1);
-        $this->assertSame(1, $json->id);
+        $httpCode = json_worker::delete_post(1);
+        $this->assertSame(200, $httpCode);
     }
     public function test_edit_post()
     {

@@ -3,6 +3,8 @@
 
 use PHPUnit\Framework\TestCase;
 
+require_once('json_worker.php');
+
 class json_workerTest extends TestCase
 {
     public function test_get_users()
@@ -18,7 +20,7 @@ class json_workerTest extends TestCase
     public function test_get_users_todos()
     {
         $json = json_worker::get_users_todos(1);
-        $this->assertSame(20, count($json[0]->id));
+        $this->assertSame(20, count($json));
     }
     public function test_add_post()
     {
